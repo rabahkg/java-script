@@ -1,0 +1,13 @@
+//functions are block of code design to perform particular task
+
+1.function declaration
+2.function expression
+3.arrow function
+4.call back function
+5.IIFE(immediately invoked function expression)
+
+PRE-DEFINED FUNCTION(built-in function)
+
+1.string 
+2.date
+3.math function
