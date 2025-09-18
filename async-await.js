@@ -1,12 +1,19 @@
 // async marks a function that will return a promise 
 // await-promise the function execution until a promise is resolved 
-it makes asyncronous look and behave like syncronous code
+// it makes asyncronous look and behave like syncronous code 
 
-async function hello(){
+function fetchData() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("data loaded!!")
+        }, 2000)
+    })
 }
 
-const sayBye = async function(){
+async function getData() {
+    console.log("start");
+    const result = await fetchData();
+    console.log(result);
+    console.log("end");
 }
-
-const sayHello = async () =>{
-}
+getData()
