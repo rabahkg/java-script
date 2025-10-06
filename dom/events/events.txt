@@ -1,0 +1,2 @@
+<!-- events is an action or occurence that happens to the browser  -->
+ <!-- event handling - evend handling means wrighting a js code that will run when a specific event occucrens  -->

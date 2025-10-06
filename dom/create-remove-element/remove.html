@@ -1,0 +1,26 @@
+<!-- directly remove the selcted element  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>remove example</h2>
+    <p id="myPara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident alias cumque corrupti. Tenetur atque vero quis maxime facere exercitationem eveniet provident. Explicabo nemo molestias dolorem cumque deserunt consequatur repellat doloribus!</p>
+    <button onclick="removePara()">remove paragraph</button>
+    <button onclick="removePara()">add paragraph</button>
+
+    <script>
+        function removePara(){
+            let para = document.getElementById("myPara");
+            para.remove();
+        }
+        function addPara(){
+              const newPragraph  = document.createElement("piii");
+        }
+    </script>
+</body>
+</html>

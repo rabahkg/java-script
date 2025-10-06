@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>remove child example</h2>
+    <div id="container">
+        <p id="child">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, vitae possimus repudiandae quisquam facere aut itaque, autem harum sunt totam ipsa voluptate at aperiam! Magni, consequuntur a? Quis, aperiam dolore!</p>
+    </div>
+    <button onclick="removeChildElement()">remove child</button>
+
+    <script>
+        function removeChildElement(){
+            let parent = document.getElementById("container");
+            let child = document.getElementById("child");
+            parent.removeChild(child)
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="post"></ul>
+
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(data => {
+                const userlist = document.getElementById("post");
+
+                data.slice(0,5).forEach(usr => {
+                      const li = document.createElement("li"    );
+                      li.textContent = `# ${usr.name} - ${usr.email}`;
+                      userlist.appendChild(li) 
+                })
+        })
+        .catch(error => console.log("error fetching datas: ", error))
+    </script>
+
+</body>
+
+</html>

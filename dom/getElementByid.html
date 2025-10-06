@@ -1,0 +1,26 @@
+<!-- //is a js methods is used to access an html element by its high attribute  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="main-head">welcome</h1>
+    <button onclick="changeHeading()">click me</button>
+
+    <script>
+        function changeHeading(){      
+
+            const heading = document.getElementById("main-head");
+
+            heading.textContent="hello you clecked the button !!!"
+
+
+
+        }
+    </script>
+</body>
+</html>
