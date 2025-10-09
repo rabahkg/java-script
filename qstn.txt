@@ -1,0 +1,139 @@
+1.  what is the difference between synchronous and asynchronous operations?
+
+    Synchronous = Wait for each task to finish.
+    Asynchronous = Don’t wait — move on and handle the result later (using callbacks, promises, or async/await).
+
+2.  what is DOM?
+
+    The DOM (Document Object Model) is a programming interface for web documents.
+    It represents the structure of an HTML or XML page as a tree of objects, where each element (like <p>, <div>, <img>, etc.) is a node in that tree.
+
+3.  What are the data types in JS?
+
+    1-Primitive Data types
+        String,Number,Boolean,Undefined,Null,Symbol
+    
+    Key Points:
+    Primitive values are immutable (can’t be changed directly).
+    Stored by value, not by reference.
+    Used for simple data like numbers, text, and true/false conditions.
+    
+    2-Non-Primitive DataTypes
+        Object,Array,function
+
+    Key Characteristics:
+    Mutable: You can modify their contents.
+    Stored by reference: When assigned to another variable, both point to the same memory location.
+    Can contain multiple values: Unlike primitive types, which hold only one.
+
+4.  What is an Event in JS?
+
+    Event is an action or occurance that happens to the browser
+    Event handling means writing a js code that will run when a specific event occurs
+
+    multiple ways to handle the event:
+
+    1- Inline Event handling
+    2- Using DOM properties
+    3- Using Add event listner
+
+5.  What ared closure in JS?
+
+    A closure is a function that remembers and can access variables from its outer (parent) function’s scope, even after the parent function has finished executing.
+
+6.  What is the difference between MAP and ForEach?
+
+    forEach() - Executes a function for each element (no return).
+    map() - Executes a function and returns a new array with modified values.
+
+7.  What is a CallBack function in JS?
+
+    function passing another function as an argument
+    KeyFeatures:
+    > it handle asynchronous(things can happen independently, without waiting for each other.) operations
+    > customise behaviour of general purpose function
+    > avoid blocking code execution
+
+8.  What is Inheritence in JS?
+
+    Inheritance in JavaScript is a feature that allows one class or object to access the properties and methods of another.
+    It helps in code reusability, organization, and creating hierarchies between objects (like parent–child relationships).
+
+9.  What is the purpose of Try Catch Statement in JS?
+
+    The try...catch statement is used to handle errors in JavaScript programs — so that even if something goes wrong, your code doesn’t crash and can continue running smoothly.
+
+10. What is the purpose of AddEventListener Method in JS?
+
+    The addEventListener method is used to attach an event handler to a specific HTML element.
+
+    It allows your webpage to respond to user actions (like clicks, mouse movements, typing, or form submissions) without overwriting existing event handlers.
+
+11. What is the diffrence between querySelector and querySelector all?
+    
+    querySelector → Selects the first matching element.
+    querySelectorAll → Selects all matching elements as a NodeList.
+
+12. What is the diffrence between Null and undefined?
+
+    undefined → “Value not assigned.”
+    null → “Value intentionally empty.”
+
+13. what is the difference between == and === in JS?
+
+    == → Checks value only, allows type conversion.
+    === → Checks value + type, stricter and safer.
+
+14. What is Hoisting in JS?
+
+    Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their scope (global or function) before the code is executed.
+
+15. What is the 'THIS' keyword in JS?
+
+    The this keyword refers to the object that is currently executing the code.
+    Its value depends on how a function is called, not where it is defined.
+
+16. What are the diffrent ways to define function in JS?
+
+    Declaration → standard, hoisted.
+
+    Expression → assigned to variable.
+
+    Arrow → short + lexical this.
+
+    Anonymous → no name, often callback.
+
+    IIFE → runs immediately.
+
+    CallBack -> function passing another function as an argument
+
+17. What is the purpose of LET,VAR,CONST in JS? 
+
+    var → old, function-scoped, can redeclare.
+
+    let → modern, block-scoped, can reassign but not redeclare.
+
+    const → block-scoped, cannot reassign, must initialize.
+    
+18. what is the difference between Primitive and Non-Primitive data types?
+    
+    Primitive → single, simple, immutable values, copied by value.
+
+    Non-Primitive → complex, mutable structures, copied by reference.
+
+19. What is the Use of Spread Operator?
+
+    The spread operator (...) allows you to expand an array, object, or iterable into individual elements.
+    It is widely used for copying, merging, or passing multiple values.
+
+20. What is Ternary Operator in JS?
+
+    Ternary operator is a compact if-else used to assign or return values based on a condition:
+    condition ? valueIfTrue : valueIfFalse
+
+21. What is Rest Parameter?
+
+    The rest parameter allows a function to accept an indefinite number of arguments as an array.
+
+    It is denoted by ... before the parameter name.
+
