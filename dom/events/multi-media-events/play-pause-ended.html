@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>audio event: play pause ended</h2>
+
+    <audio id="audioPlayer" controls>
+        <source src="./audio.opus" type="audio/mpeg">
+    </audio>
+
+    <p id="eventOutput">event will appear here</p>
+
+    <script>
+        const audio = document.getElementById("audioPlayer");
+        const output = document.getElementById("eventOutput");
+
+        //play event
+        audio.addEventListener('play', () => {
+            output.textContent = "play event fired!!";
+            console.log("play event fired!!");
+            
+        })
+    </script>
+</body>
+</html>
