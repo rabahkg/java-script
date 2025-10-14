@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seeking Event Example</title>
+</head>
+<body>
+  <h2>Seeking Event Example</h2>
+
+  <audio id="myAudio" width="320" height="240" controls>
+    <source src="./presssssss.mp3" type="audio/mp3">
+  </audio>
+
+  <p id="status">Try moving the progress bar!</p>
+
+  <script>
+    const audio = document.getElementById("myAudio");
+    const status = document.getElementById("status");
+
+    // Fires when seeking starts (user drags the seek bar)
+    audio.addEventListener("seeking", () => {
+      status.textContent = "⏩ Seeking... (changing audio time)";
+    });
+
+   ///d Fires when seeking completes
+    audio.addEventListener("seeked", () => {
+      status.textContent = "✅seeked...";
+    });
+  </script>
+</body>
+</html>

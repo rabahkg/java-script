@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h2>audio event: play pause ended</h2>
 
     <audio id="audioPlayer" controls>
-        <source src="./audio.opus" type="audio/mpeg">
+        <source src="./presssssss.mp3" type="audio/mpeg">
     </audio>
 
     <p id="eventOutput">event will appear here</p>
@@ -22,8 +24,19 @@
         audio.addEventListener('play', () => {
             output.textContent = "play event fired!!";
             console.log("play event fired!!");
-            
-        })
+        });
+
+        audio.addEventListener('pause', () => {
+            output.textContent = "pause event fired!!";
+            console.log("pause event fired!!");
+        });
+
+
+        audio.addEventListener('ended', () => {
+            output.textContent = "ended event fired!!";
+            console.log("ended event fired!!");
+        });
     </script>
 </body>
+
 </html>
