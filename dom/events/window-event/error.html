@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error Event</title>
+</head>
+<body>
+  <h2>Error Event Example</h2>
+  <p>An error will occur automatically after 2 seconds.</p>
+
+  <script>
+    window.addEventListener("error", (event) => {
+      console.log("An error occurred!");
+      console.log("Message:", event.message);
+      console.log("File:", event.filename);
+      console.log("Line:", event.lineno);
+    });
+
+    setTimeout(() => {
+      undefinedFunction(); 
+    }, 2000);
+  </script>
+</body>
+</html>

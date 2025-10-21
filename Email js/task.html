@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Form with Labels Below</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1cde73, #bc3e37);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #fff;
+            width: 600px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-header {
+            background-color: #111;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+            margin: -30px -30px 20px -30px;
+        }
+
+        .name-fields {
+            display: flex;
+            gap: 15px;
+        }
+
+        .name-field {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .field-label {
+            font-size: 12px;
+            color: gray;
+            margin-top: 5px;
+            margin-left: 2px;
+        }
+
+        .company-row {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .company-row label {
+            text-align: left;
+            width: auto;
+        }
+
+        .customer-status {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            /* stack children vertically */
+            gap: 5px;
+            /* vertical spacing between label and radios */
+            font-size: 14px;
+        }
+
+
+        .customer-status label {
+            font-weight: 500;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            /* space between Yes and No options */
+        }
+
+        .radio-group label {
+            display: block;
+            align-items: center;
+            gap: 5px;
+            /* small gap between radio button and label text */
+            font-weight: normal;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #ff4b5c;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: #e63946;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>EVENT REGISTRATION FORM</h2>
+                <form id="myForm" onsubmit="return validateForm()">
+
+        </div>
+
+        <form>
+            <div class="name-fields">
+                <label>Name:</label>
+
+                <div class="name-field">
+
+                    <input type="text" id="firstname" required>
+                    <span class="field-label">First Name</span>
+                </div>
+
+                <div class="name-field">
+                    <input type="text" id="lastname" required>
+                    <span class="field-label">Last Name</span>
+                </div>
+            </div><br><br>
+
+            <div class="name-fields">
+                <label for="company">Company:</label>
+                <input type="text" name="company" id="company">
+            </div><br><br>
+
+            <div class="name-fields">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="example@gmail.com">
+
+
+            </div><br><br>
+
+
+
+            <div class="name-fields">
+                <label>Phone:</label>
+
+                <div class="name-field">
+                    <input type="text" id="Phonenumber" required>
+                    <span class="field-label">Areacode</span>
+                </div>
+
+                <div class="name-field">
+                    <input type="phone" id="phone number" required>
+                    <span class="field-label">phone number</span>
+                </div>
+            </div><br><br>
+
+            <div class="name-fields">
+                <label for="subject">Subject:</label>
+                <input type="text" name="subject" id="subject">
+                <select name="subject" id="subject">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+
+            </div>
+
+            <div class="customer-status">
+                <label>Are you an existing customer?</label><br>
+
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="customer" id="yes" value="yes">
+                        Yes
+                    </label>
+
+                    <label>
+                        <input type="radio" name="customer" id="no" value="no">
+                        No
+                    </label>
+                </div>
+            </div>
+
+
+
+            <button type="submit" class="submit-btn">REGISTER</button>
+        </form>
+    </div>
+   </form>
+    <script>
+
+        function validateForm() {
+
+            let isValid = true;
+
+
+
+            // name validation 
+            const name = document.getElementById("name").value.trim();
+            if (name === "") {
+                document.getElementById("nameError").innerHTML = "Name is required";
+                isValid = false;
+            }
+
+            // email validation 
+            const email = document.getElementById("email").value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerHTML = "Invalid email formate";
+                isValid = false;
+            }
+            // company 
+            const company = document.getElementById("company").value.trim();
+            const companyPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!companyPattern.test(company)) {
+                document.getElementById("companyError").innerHTML = "Company is required";
+                isValid = false;
+            }
+
+            // phone 
+            const phone = document.getElementById("phone").value.trim();
+            const phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phone)) {
+                document.getElementById("PhoneError").innerHTML = "phone number must be 10 digits";
+                isValid = false;
+            }
+            // subject 
+            const subject = document.getElementById("subject").value.trim();
+            if (subject === "") {
+                document.getElementById("subjectError").innerHTML = "subject is required";
+                isValid = false;
+            }
+
+
+            // customers 
+            const customer = document.getElementById("customer").value.trim();
+            if (customer === "") {
+                document.getElementById("customerError").innerHTML = "customer existing is required";
+                isValid = false;
+            }
+
+            return isValid;
+
+        }
+    </script>
+</body>
+
+</html>

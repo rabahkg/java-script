@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Error Event</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-  <h2>Error Event Example</h2>
-  <p>An error will occur automatically after 2 seconds.</p>
+    <audio id="audioError" controls>
+        <source src="./noneexistingfile.mp3" type="audio/mp3">
 
-  <script>
-    window.addEventListener("error", (event) => {
-      console.log("An error occurred!");
-      console.log("Message:", event.message);
-      console.log("File:", event.filename);
-      console.log("Line:", event.lineno);
-    });
+    </audio>
 
-    setTimeout(() => {
-      undefinedFunction(); 
-    }, 2000);
-  </script>
+    <p id="errorMsg" style="color: rgb(255, 0, 0); display: none;"></p>
+
+    <script>
+        const audioError = document.getElementById('audioError');
+        const errorMessage = document.getElementById('errorMsg');
+
+        //listen for error on the source element
+        const source = audioError.querySelector('source');
+        source.addEventListener('error', () => {
+            errorMessage.textContent = 'Audio failed to load!';
+            errorMessage.style.display = 'block';
+            console.log('failed');
+        })
+    </script>
 </body>
 </html>
